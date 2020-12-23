@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: monospace;
+}
+
+
+.list li {
+    list-style-type: none;
+    /* display: inline; */
+    /* padding-right: 5px; */
+}
+
+
+.company, .new, .featured, .position, .tool, .language, .role, .level, .postedAt, .dot, .contract, .location {
+    display: inline;
+    padding: 0.5em;
+}
+
+.tool, .language, .role, .level {
+    float: right;
+}
+

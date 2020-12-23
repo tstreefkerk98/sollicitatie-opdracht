@@ -1,1 +1,36 @@
-<p>assignments works!</p>
+<div class="container" *ngFor="let assignment of assignments">
+    <div class="well">
+        <div class="row">
+            <div class="logo" class="col-1">
+                <img src="../../assets/{{ assignment.logo }}">
+            </div>
+            <div class="col-11">
+                <ul class="list">
+                    <li>
+                        <div class="company">{{ assignment.company }}</div>
+                        <div class="new">{{ assignment.new }}</div>
+                        <div class="featured">{{ assignment.featured }}</div>
+                    </li>
+                    <li>
+                        <div class="position">{{ assignment.position }}</div>
+                        <div class="tool">{{ assignment.tools[0] }}</div>
+                        <div class="tool">{{ assignment.tools[1] }}</div>
+                        <div class="language">{{ assignment.tools[0] }}</div>
+                        <div class="language">{{ assignment.tools[1] }}</div>
+                        <div class="language">{{ assignment.tools[2] }}</div>
+                        <div class="role">{{ assignment.role }}</div>
+                        <div class="level">{{ assignment.level }}</div>
+                    </li>
+                    <li>
+                        <div class="postedAt">{{ assignment.postedAt }}</div>
+                        <span class="dot">&#8226;</span>
+                        <div class="contract">{{ assignment.contract }}</div>
+                        <span class="dot">&#8226;</span>
+                        <div class="location">{{ assignment.location }}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
