@@ -1,0 +1,46 @@
+#filter-bar {
+    position: fixed;
+    width: 100%;
+    background-color: #5da4a6;
+    z-index: 9999;
+    height: 8em;
+}
+.well {
+    margin-top: 2em;
+    height: 4em;
+}
+.list {
+    list-style-type: none;
+}
+.list li {
+    float: left;
+    color: #5da4a6;
+    background-color: #eef7f6;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.3em;
+    margin: 0.65em 0.3em 0 0;
+    border-radius: 5px;
+}
+.closeButton {
+    color: white;
+    background-color: #5da4a6;
+    border: 0;
+    border-radius: 5px;
+}
+.closeButton:hover {
+    color: white;
+    background-color: #2a3a39;
+}
+.clearButton {
+    float: right;
+    font-size: 1em;
+    color: #5da4a6;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.3em;
+}
+.clearButton:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}

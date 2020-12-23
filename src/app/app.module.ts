@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
+import { FilterBarComponent } from './filter-bar/filter-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AssignmentsComponent
+    AssignmentsComponent,
+    FilterBarComponent
   ],
   imports: [
     BrowserModule

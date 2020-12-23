@@ -1,0 +1,60 @@
+.container {
+    padding-top: 7%;
+}
+.well {
+    background: white;
+    margin-bottom: 2em;
+    padding: 2em 2em 1em 2em;
+}
+.list li {
+    list-style-type: none;
+}
+.company, .new, .featured, .position, .tool, .language, .role, .level, .postedAt, .dot, .contract, .location, .alignRight {
+    display: inline;
+}
+.alignRight {
+    float: right;
+}
+.company, .new, .featured, .position,.postedAt, .dot, .contract, .location {
+    margin-right: 0.5em;
+}
+.tool, .language, .role, .level {
+    padding: 0 0.3em 0 0.3em;
+    margin: 0 0.3em 0 0.3em;
+    color: #5da4a6;
+    background-color: #eef7f6;
+    border-radius: 0.3em;
+}
+.tool:hover, .language:hover, .role:hover, .level:hover {
+    color: white;
+    background-color: #5da4a6;
+    cursor: pointer;
+}
+.company, .new, .featured, .tool, .language, .role, .level {
+    font-size: 1.25em;
+}
+.position {
+    font-size: 2em;
+}
+.position:hover {
+    color: #5da4a6;
+    font-weight: bold;
+    cursor: pointer;
+}
+.postedAt, .contract, .location {
+    font-size: 0.75em;
+}
+.company {
+    color: #5da4a6;
+}
+.new {
+    background-color: #5da4a6;
+}
+.featured {
+    color: white;
+    background-color: #2a3a39;
+}
+.new, .featured {
+    padding: 0 0.3em 0 0.3em;
+    border-radius: 0.3em;
+}

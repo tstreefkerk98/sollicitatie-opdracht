@@ -16,8 +16,4 @@ export class AssignmentService {
     return of(ASSIGNMENTS);
   }
 
-  getAssignment(id: number): Observable<Assignment> {
-    return of(ASSIGNMENTS.find(assignment => assignment.id === id));
-  }
-  
 }
