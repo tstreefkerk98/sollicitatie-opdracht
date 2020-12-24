@@ -14,17 +14,13 @@ export class FilterService {
   }
 
   addFilter(filter: string): void {
-    if (!this.filters.includes(filter)) {
-      this.filters.push(filter);
-    }
+    this.filters.push(filter);
   }
 
   removeFilter(filter: string): void {
-    if (this.filters.includes(filter)) {
-      const index = this.filters.indexOf(filter, 0);
-      if (index > -1) {
-        this.filters.splice(index, 1);
-      }
+    const index = this.filters.indexOf(filter, 0);
+    if (index > -1) {
+      this.filters.splice(index, 1);
     }
   }
 

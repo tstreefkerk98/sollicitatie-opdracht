@@ -10,8 +10,8 @@ export class FilterBarComponent implements OnInit {
   filters: string[] = [];
 
   constructor(
-    public filterService: FilterService
-    ) { }
+    private filterService: FilterService
+  ) { }
 
   ngOnInit(): void {
     this.filters = this.filterService.getFilters();
@@ -19,10 +19,12 @@ export class FilterBarComponent implements OnInit {
 
   removeFilter(filter: string): void {
     this.filterService.removeFilter(filter);
+    // Insert some sort of call to filter the assignments
   }
 
   clearFilters(): void {
     this.filterService.clearFilters();
+    // Insert some sort of call to filter the assignments
   }
 
 }

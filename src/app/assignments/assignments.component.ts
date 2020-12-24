@@ -15,7 +15,7 @@ export class AssignmentsComponent implements OnInit {
 
   constructor(
     private assignmentService: AssignmentService,
-    public filterService: FilterService
+    private filterService: FilterService
   ) { }
 
   ngOnInit(): void {
@@ -34,7 +34,48 @@ export class AssignmentsComponent implements OnInit {
   }
 
   addFilter(filter: string): void {
-    this.filterService.addFilter(filter);
+    if (!this.filters.includes(filter)) {
+      this.filterService.addFilter(filter);
+      // this.filter();
+    }
   }
 
+  filter(): void {
+    var i: number;
+    for (i = 0; i < this.filters.length; i++) {
+      var filter = this.filters[i];
+      var filteredAssignments = this.allAssignments.slice();
+
+      var j = 0;
+      while (j < filteredAssignments.length) {
+        var assignment = filteredAssignments[j];
+
+        if (!this.getFilterParameters(assignment).includes(filter)) {
+          filteredAssignments.splice(j, 1);
+        } else {
+          j++;
+        }
+      }
+    }
+    this.assignments = filteredAssignments;
+  }
+
+  getFilterParameters(assignment: Assignment): string[] {
+    var filterParameters: string[] = [];
+
+    filterParameters.push(assignment.level);
+    filterParameters.push(assignment.role);
+
+    var i: number;
+    for (i = 0; i < assignment.languages.length; i++) {
+      filterParameters.push(assignment.languages[i]);
+    }
+
+    var j: number;
+    for (j = 0; j < assignment.tools.length; j++) {
+      filterParameters.push(assignment.tools[i]);
+    }
+
+    return filterParameters;
+  }
 }
