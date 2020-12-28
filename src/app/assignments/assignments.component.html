@@ -1,47 +1,40 @@
-<div class="container">
-    <div *ngFor="let assignment of assignments">
-        <div class="well">
-            <div class="row">
-                <div class="logo" class="col-1">
-                    <img src="../../assets/{{ assignment.logo }}">
-                </div>
-                <div class="col-11">
-                    <ul class="list">
-                        <li>
-                            <div class="company">{{ assignment.company }}</div>
-                            <div *ngIf="assignment.new" class="new">NEW!</div>
-                            <div *ngIf="assignment.featured" class="featured">FEATURED</div>
-                        </li>
-                        <li>
-                            <div class="position">{{ assignment.position }}</div>
-                            <div class="alignRight">
-                                <div class="level" 
-                                    (click)="addFilter(assignment.level)">{{ assignment.level }}</div>
-                                <div class="role" 
-                                    (click)="addFilter(assignment.role)">{{ assignment.role }}</div>
-                                <div *ngIf="assignment.tools[1]" class="tool" 
-                                    (click)="addFilter(assignment.tools[1])">{{ assignment.tools[1] }}</div>
-                                <div *ngIf="assignment.tools[0]" class="tool" 
-                                    (click)="addFilter(assignment.tools[0])">{{ assignment.tools[0] }}</div>
-                                <div *ngIf="assignment.languages[2]" class="language"
-                                    (click)="addFilter(assignment.languages[2])">{{ assignment.languages[2] }}</div>
-                                <div *ngIf="assignment.languages[1]" class="language"
-                                    (click)="addFilter(assignment.languages[1])">{{ assignment.languages[1] }}</div>
-                                <div *ngIf="assignment.languages[0]" class="language"
-                                    (click)="addFilter(assignment.languages[0])">{{ assignment.languages[0] }}</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="postedAt">{{ assignment.postedAt }}</div>
-                            <span class="dot">&#8226;</span>
-                            <div class="contract">{{ assignment.contract }}</div>
-                            <span class="dot">&#8226;</span>
-                            <div class="location">{{ assignment.location }}</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<div class="well">
+    <div class="row">
+        <div class="logo" class="col-1">
+            <img src="../../assets/{{ assignment.logo }}">
+        </div>
+        <div class="col-11">
+            <ul class="list">
+                <li>
+                    <div class="company">{{ assignment.company }}</div>
+                    <div *ngIf="assignment.new" class="new">NEW!</div>
+                    <div *ngIf="assignment.featured" class="featured">FEATURED</div>
+                </li>
+                <li>
+                    <div class="position">{{ assignment.position }}</div>
+                    <div class="alignRight">
+                        <div class="level" (click)="addFilter(assignment.level)">{{ assignment.level }}</div>
+                        <div class="role" (click)="addFilter(assignment.role)">{{ assignment.role }}</div>
+                        <div *ngIf="assignment.tools[1]" class="tool" (click)="addFilter(assignment.tools[1])">{{
+                            assignment.tools[1] }}</div>
+                        <div *ngIf="assignment.tools[0]" class="tool" (click)="addFilter(assignment.tools[0])">{{
+                            assignment.tools[0] }}</div>
+                        <div *ngIf="assignment.languages[2]" class="language"
+                            (click)="addFilter(assignment.languages[2])">{{ assignment.languages[2] }}</div>
+                        <div *ngIf="assignment.languages[1]" class="language"
+                            (click)="addFilter(assignment.languages[1])">{{ assignment.languages[1] }}</div>
+                        <div *ngIf="assignment.languages[0]" class="language"
+                            (click)="addFilter(assignment.languages[0])">{{ assignment.languages[0] }}</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="postedAt">{{ assignment.postedAt }}</div>
+                    <span class="dot">&#8226;</span>
+                    <div class="contract">{{ assignment.contract }}</div>
+                    <span class="dot">&#8226;</span>
+                    <div class="location">{{ assignment.location }}</div>
+                </li>
+            </ul>
         </div>
     </div>
-
 </div>

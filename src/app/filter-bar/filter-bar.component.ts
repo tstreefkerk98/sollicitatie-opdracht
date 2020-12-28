@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FilterService } from '../filter.service';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-bar',
@@ -7,24 +6,17 @@ import { FilterService } from '../filter.service';
   styleUrls: ['./filter-bar.component.css']
 })
 export class FilterBarComponent implements OnInit {
-  filters: string[] = [];
 
-  constructor(
-    private filterService: FilterService
-  ) { }
+  @Input() filters? : string[];
+  @Output() removeFilterParam = new EventEmitter<string>();
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.filters = this.filterService.getFilters();
   }
 
-  removeFilter(filter: string): void {
-    this.filterService.removeFilter(filter);
-    // Insert some sort of call to filter the assignments
-  }
-
-  clearFilters(): void {
-    this.filterService.clearFilters();
-    // Insert some sort of call to filter the assignments
+  removeFilter(filter: string) {
+    this.removeFilterParam.emit(filter);
   }
 
 }

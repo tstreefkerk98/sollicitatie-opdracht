@@ -1,0 +1,6 @@
+<app-filter-bar [filters]="Filters" (removeFilterParam)="removeFilter($event)"></app-filter-bar>
+<div class="container">
+    <div *ngFor="let assignment of Assignments">
+        <app-assignments [assignment]="assignment" (addFilterParam)="addFilter($event)"></app-assignments>
+    </div>
+</div>
